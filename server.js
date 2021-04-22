@@ -7,7 +7,7 @@ const express = require('express'); //npm install express
 const server = express();
 
 
-const PORT =  3010;
+const PORT =  process.env.PORT || 3010;
 
 // the server is ready for listening
 server.listen(PORT, ()=>{
