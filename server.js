@@ -17,9 +17,16 @@ server.listen(PORT, ()=>{
 
 // localhost:3010/test ->http request (/test->route)
 server.get('/test',(request,response)=>{
-    response.send('You server is alive!!')
+    response.send('Your server is alive!!')
+    // console.log(request);
 })
 
+server.get('/',(req,res)=>{
+    res.send('you are in the root');
+})
 
+server.get('/data',(req,res)=>{
+    res.send('you are in the data page');
+})
 
 
